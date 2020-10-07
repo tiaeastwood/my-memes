@@ -2,22 +2,22 @@ import React from 'react'
 
 const puppies = [
     {
-        name: 'Teddy',
+        name: 'Doge',
         img:
-            'https://i.pinimg.com/originals/39/6f/14/396f14bd9c68652906500047d677356c.jpg',
-        cutenessrating: 5
+            './img/doge.jpg',
+        rating: '⭐⭐⭐⭐⭐'
     },
     {
-        name: 'Buster',
+        name: 'Pun Dog',
         img:
-            'https://cdn.royalcanin-weshare-online.io/pCJJPmYBaxEApS7LeAbn/v1/ed7h-how-to-buy-a-puppy-hero-dog?w=1440&auto=compress&fm=jpg',
-        cutenessrating: 4.5
+            './img/pundog.png',
+        rating: '⭐⭐⭐⭐'
     },
     {
-        name: 'Paddy',
+        name: '"Yes, This is Dog"',
         img:
-            'http://cdn.akc.org/content/article-body-image/beagle2_cute_puppies.jpg',
-        cutenessrating: 4
+            './img/yesthisisdog.jpg',
+        rating: '⭐⭐⭐'
     },
 ];
 
@@ -27,12 +27,15 @@ const puppies = [
 const PuppyList = (props) => {
     return (
         <ul>
-            {puppies.map(({ name, img }) => {
+            {puppies.map(({ name, img, rating }) => {
                 return (
                     <li key={name}>
-                        <p>{name}</p>
+                        <p><b>{name}</b></p>
                         {props.showImages && (
-                            <img src={img} alt={`A puppy named ${name}`} />
+                            <img src={img} alt={`Famous meme dog, ${name}`} />
+                        )}
+                        {props.showImages && (
+                            <p>Rating: {rating}</p>
                         )}
                     </li>
                 );

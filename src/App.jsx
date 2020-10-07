@@ -34,12 +34,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <h1>{this.state.user}'s Puppy List</h1>
-          <button className="greetingBtn" onClick={this.sayHello}>Say hello!</button>
-          <CreateGreeting showGreeting={this.state.showGreeting} user={this.state.user}/>
+          <h1 className="bigtext">Know Your Memes!</h1>
+          <button onClick={this.sayHello}>Pointless button that says hello to you</button>
+          <CreateGreeting showGreeting={this.state.showGreeting} user={this.state.user} />
         </header>
-        <button className="puppyPics" onClick={this.toggleImages}>Click for a surprise!</button>
-        <PuppyList showImages={this.state.showImages} />
+        <section>
+          <h1 className="orangetext"><span role='img' aria-label='dog emoji'>🐶</span> {this.state.user}'s Top Dogs <span role='img' aria-label='dog emoji'>🐶</span></h1>
+          <button onClick={this.toggleImages}>Click to reveal quality content</button>
+          <PuppyList showImages={this.state.showImages} />
+        </section>
       </div>
     );
   };

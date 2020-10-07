@@ -6,7 +6,7 @@ const CreateGreeting = (props) => {
     console.log(`Hello ${name}`)
     return (
             props.showGreeting && (
-                <p>Hello {name}</p>
+                <p className="greeting">Hello {name}!</p>
             )
     );
 };
