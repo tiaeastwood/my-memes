@@ -82,3 +82,12 @@ button:hover {
   cursor: pointer;
   background-color: rgb(194, 126, 0);
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin: 10px;
+}
